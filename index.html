@@ -169,12 +169,7 @@
       <button class="btn-gray" onclick="closeModal()">İptal</button>
       <button class="btn-green" onclick="saveHisse()">Kaydet</button>
     </div>
-    <div class="bagis-section" id="bagis-section" style="display:none">
-      <div class="lbl2">Bağış yapmak için IBAN'ı kopyalayın:</div>
-      <div class="iban-kopyala" id="iban-btn" onclick="ibanKopyala()">
-        <span id="iban-text">TR02 0005 9003 7013 0037 0829 98</span>
-        <span class="copy-icon">📋</span>
-      </div>
+
       <span class="kopyalandi-badge" id="kopyalandi">✓ IBAN kopyalandı!</span>
       <div style="font-size:11px;color:#888;">Banka: Şekerbank — Açıklamaya adınızı ve <strong>BAĞIŞ</strong> yazınız.</div>
     </div>
@@ -358,14 +353,7 @@ async function silHisse() {
   }
 }
 
-function ibanKopyala() {
-  const iban = 'TR02 0005 9003 7013 0037 0829 98';
-  navigator.clipboard.writeText(iban).then(() => {
-    const badge = document.getElementById('kopyalandi');
-    if(badge) {
-      badge.style.display = 'block';
-      setTimeout(() => { badge.style.display = 'none'; }, 2500);
-    }
+
   });
 }
 
